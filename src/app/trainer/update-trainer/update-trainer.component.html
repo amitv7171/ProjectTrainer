@@ -1,0 +1,53 @@
+
+
+<div *ngIf="alertTrainer" class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Trainer is updated</strong> 
+    <button (click)="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+
+<form [formGroup]="editTrainer" (ngSubmit)="collection()">
+
+  
+    <div class="form-group">
+      <label >Enter Age</label>
+      <input type="number" class="form-control" placeholder="Enter age" formControlName="age">
+    </div>
+
+
+    <div class="form-group">
+        <label >Enter Gender</label>
+        <input type="text" class="form-control" placeholder="Enter Gender" formControlName="gender">
+      </div>
+
+      <div class="form-group">
+        <label >Enter Address</label>
+        <input type="text" class="form-control" placeholder="Enter price" formControlName="address">
+      </div>
+  
+      <div class="form-group">
+        <label >Enter City</label>
+        <input type="text" class="form-control" placeholder="Enter city" formControlName="city">
+      </div>
+  
+      <div class="form-group">
+        <label >Enter Country</label>
+        <input type="text" class="form-control" placeholder="Enter price" formControlName="country">
+      </div>
+  
+      <div class="form-group">
+        <label >Enter ContactNo</label>
+        <input type="number" class="form-control" placeholder="Enter contactNo" formControlName="contactNo">
+      </div>
+  
+      <div class="form-group">
+        <label >Enter TrackName</label>
+        <input type="text" class="form-control" placeholder="Enter trackName" formControlName="trackName">
+      </div>
+  
+
+    <button type="submit" class="btn btn-primary">Update</button>
+
+  </form>
