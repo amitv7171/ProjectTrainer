@@ -12,6 +12,12 @@ import { AddTrainerComponent} from './trainer/add-trainer/add-trainer.component'
 import { TrainerComponent} from './trainer/trainer.component';
 import { UpdateTrainerComponent} from './trainer/update-trainer/update-trainer.component';
 
+import { DisplayAllTaskComponent } from './task/display-all-task/display-all-task.component';
+import { AcceptTaskDetailsComponent } from './task/accept-task-details/accept-task-details.component';
+import { UpdateTaskDetailsComponent } from './task/update-task-details/update-task-details.component';
+import { DeleteTaskDetailsComponent } from './task/delete-task-details/delete-task-details.component';
+
+
 const routes: Routes = [
   {path:'',redirectTo:'/user/login',pathMatch:'full'},
 {
@@ -32,6 +38,13 @@ const routes: Routes = [
 {path:'Trainer',component:TrainerComponent},
 {path:'update',component:UpdateTrainerComponent},
 {path:'update/:id',component:UpdateTrainerComponent},
+
+
+{path:'DisplayTask',component:DisplayAllTaskComponent},
+{path:'AcceptTaskDetails',component:AcceptTaskDetailsComponent},
+{path:'UpdateTaskDetails',component:UpdateTaskDetailsComponent},
+{path:'DeleteTaskDetails',component:DeleteTaskDetailsComponent}
+
 ];
 
 @NgModule({

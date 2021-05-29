@@ -1,0 +1,16 @@
+
+<div class="container" id="div1" style="background-color: rgba(42, 114, 8, 0.966);" >
+    <!--<form [formGroup]="addEmployees" (ngSubmit)="collectAndAddDetails()">-->
+        <!-- <form [formGroup]="getName" (ngSubmit)="submitNameToDelete()"></form> -->
+        
+        <form [formGroup]="getId" (ngSubmit)="submitNameToGetData()">
+            <div class="form-group">
+                <h1 style="color: cyan;">Please Enter Name The Task ID To Delete</h1>
+                <label style="color: rgb(44, 8, 92);">Task Id</label>
+              <input type="text" class="form-control" id="taskId"  placeholder="Enter taskId" name="taskId" formControlName="taskId">
+              <small id="Help" class="form-text text-muted"></small>
+            <button type="submit" class="btn btn-primary" id="submitbtn" >Submit</button>
+            </div>
+        </form>
+        
+        </div>

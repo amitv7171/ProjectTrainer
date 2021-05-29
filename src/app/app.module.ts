@@ -20,6 +20,8 @@ import { TrainerComponent } from './trainer/trainer.component';
 import { AddTrainerComponent } from './Trainer/add-trainer/add-trainer.component';
 import { DisplayTrainerComponent } from './Trainer/display-trainer/display-trainer.component';
 import { UpdateTrainerComponent } from './Trainer/update-trainer/update-trainer.component';
+import {TaskModule} from './task/task.module';
+import { TaskService } from './shared/task.service';
 
 @NgModule({
   declarations: [
@@ -40,13 +42,14 @@ import { UpdateTrainerComponent } from './Trainer/update-trainer/update-trainer.
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
+    TaskModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot({
       progressBar: true
     }),
     FormsModule
   ],
-  providers: [UserService,{
+  providers: [TaskService,UserService,{
     provide: HTTP_INTERCEPTORS,
     useClass: AuthInterceptor,
     multi: true

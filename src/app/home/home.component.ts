@@ -1,6 +1,6 @@
 import { Router } from '@angular/router';
 import { UserService } from './../shared/user.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   userDetails;
+
   constructor(private router: Router, private service: UserService) { }
+
 
   ngOnInit() {
      this.service.getUserProfile().subscribe(
@@ -27,4 +29,5 @@ export class HomeComponent implements OnInit {
     localStorage.removeItem('token');
     this.router.navigate(['/user/login']);
   }
+
 }

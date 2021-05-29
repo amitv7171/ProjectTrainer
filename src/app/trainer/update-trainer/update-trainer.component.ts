@@ -110,3 +110,7 @@ collection()
 
 
 }
+
+function updateTask(userName: any): (error: any) => void {
+  throw new Error('Function not implemented.');
+}

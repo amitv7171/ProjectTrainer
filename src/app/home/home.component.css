@@ -1,0 +1,16 @@
+.wrapper {
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    justify-content: center;
+    width: 100%;
+    padding: 333px;
+    background: url(C:\Users\HP\Pictures\TheWall\business-camera-coffee-1509428.jpg)  no-repeat center center fixed;
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+    
+  }

@@ -1,0 +1,60 @@
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand " href="/DisplayTask">Task Portal</a>
+      <a class="navbar-brand " href="/AcceptTaskDetails">Add Task</a>
+      <a class="navbar-brand " href="/UpdateTaskDetails">Update Task</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+  <div class="wrapper"></div>
+<div class="container" id="div1" style="background-color: rgba(42, 114, 8, 0.966);" >
+    <!--<form [formGroup]="addEmployees" (ngSubmit)="collectAndAddDetails()">-->
+        <!-- <form [formGroup]="getName" (ngSubmit)="submitNameToDelete()"></form> -->
+        
+        <form [formGroup]="getName" (ngSubmit)="submitNameToGetData()">
+            <div class="form-group">
+                <h1 style="color: cyan;">Please Enter Name The Track Name</h1>
+                <label style="color: rgb(44, 8, 92);">NAME</label>
+              <input type="text" class="form-control" id="TrackName"  placeholder="Enter TrackName" name="TrackName" formControlName="TrackName">
+              <small id="Help" class="form-text text-muted"></small>
+            <button type="submit" class="btn btn-primary" id="submitbtn" >Submit</button>
+            </div>
+        </form>
+        
+        </div>
+<!-- ////////////////////////////////////////////////// -->
+        <div>
+            <br>
+            <br>
+        </div>
+        <div class="container">
+            <div class="col-6">
+            <table class="table table-striped table-light">
+              <thead>
+                <tr>
+                    <th>TASKId</th>
+                    <th >TRACK Name</th>
+                    <th >TASK NAME</th>
+                    <th>DESCRIPTION</th>
+                    <Th>Delete Task</Th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let i of TaskNameList">
+                  <!--<td><a class="nav-item nav-link" href="EditMobileDetails/{{i.id}}">{{i.Mobile_IMEI}}</a></td>-->
+                  
+                  <!--<td><a class="nav-item nav-link" href="EditEmployeeDetailsByAdmin/{{i.id}}">{{i.Name}}</a></td>-->
+                  <td>{{i.taskId}}</td>
+                  <td style="color: coral;" id='name'>{{i.trackName}}</td>
+                  <td>{{i.taskName}}</td>
+                  <th style="color: blue;">{{i.taskDescription}}</th>
+                  <th><i (click)="deleteTask(i.taskId)" class="fa fa-close" style="font-size:20px;color:red">Delete</i></th>
+     
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          </div>

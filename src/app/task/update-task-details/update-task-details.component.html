@@ -1,0 +1,25 @@
+
+<div class="container" id="div1" style="background-color:  rgba(42, 114, 8, 0.966);" >
+    
+        
+        <form [formGroup]="updatetaskDetails" (ngSubmit)="collectAndUpdateDetails()" >
+            <div class="form-group">
+                <label style="color: rgb(44, 8, 92);">Task ID</label>
+                <input type="number" class="form-control" id="taskId"  placeholder="Enter taskId " name="taskId" formControlName="taskId">
+                <small id="Help" class="form-text text-muted"></small>
+                
+                <label style="color: rgb(44, 8, 92);">TRACK Name</label>
+              <input type="text" class="form-control" id="trackName"  placeholder="Enter trackName " name="trackName" formControlName="trackName">
+              <small id="Help" class="form-text text-muted"></small>
+                <label style="color: rgb(44, 8, 92);">TASK NAME</label>
+              <input  type="text" class="form-control" id="taskName"  placeholder="Enter taskName" name="taskName" formControlName="taskName">
+              <small id="Help" class="form-text text-muted"></small>
+        
+              <label style="color: rgb(44, 8, 92);">DESCRIPTION</label>
+              <input type="text" class="form-control" id="taskDescription"  placeholder="Enter taskDescription"name="taskDescription" formControlName="taskDescription">
+              <small id="passwordHelp" class="form-text text-muted"> </small>
+            </div>
+            <button type="submit" class="btn btn-primary" id="submitbtn" >Submit</button>
+          </form>
+        
+        </div>
