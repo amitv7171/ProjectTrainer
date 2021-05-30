@@ -17,9 +17,13 @@ import { AcceptTaskDetailsComponent } from './task/accept-task-details/accept-ta
 import { UpdateTaskDetailsComponent } from './task/update-task-details/update-task-details.component';
 import { DeleteTaskDetailsComponent } from './task/delete-task-details/delete-task-details.component';
 
+import { AboutUsComponent} from './about-us/about-us.component';
+import { ContactUsComponent} from './contact-us/contact-us.component';
+import { StartupComponent} from './startup/startup.component';
+import { SpecificTaskComponent} from './task/specific-task/specific-task.component';
 
 const routes: Routes = [
-  {path:'',redirectTo:'/user/login',pathMatch:'full'},
+  {path:'mainEntry',redirectTo:'/user/login',pathMatch:'full'},
 {
 
   path:'user',component:UserComponent,
@@ -44,7 +48,12 @@ const routes: Routes = [
 {path:'AcceptTaskDetails',component:AcceptTaskDetailsComponent},
 {path:'UpdateTaskDetails',component:UpdateTaskDetailsComponent},
 {path:'DeleteTaskDetails',component:DeleteTaskDetailsComponent},
-{path:'UpdateTaskDetails/:id',component:UpdateTaskDetailsComponent}
+{path:'UpdateTaskDetails/:id',component:UpdateTaskDetailsComponent},
+{path:'start',component:StartupComponent},
+{path:'taskDetails/:id',component:SpecificTaskComponent},
+
+{path:'about',component:AboutUsComponent},
+{path:'contact',component:ContactUsComponent}
 
 ];
 

@@ -7,6 +7,7 @@ import { Injectable } from '@angular/core';
 export class TaskService {
 
    TaskUrl="https://localhost:44304/api/Task";
+   TaskUrlTrack="https://localhost:44304/api/Tracker";
 
   constructor(private http: HttpClient) { }
 
@@ -37,6 +38,10 @@ export class TaskService {
      return this.http.delete(`${this.TaskUrl+"/Delete"}/${TaskId}`);
    }
 
+   getUserSpecificTask(id)
+   {
+    return this.http.get(`${this.TaskUrlTrack+"/GetAllTracks"}/${id}`);
+   }
   
 
 }

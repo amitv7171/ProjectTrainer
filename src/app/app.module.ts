@@ -22,6 +22,11 @@ import { DisplayTrainerComponent } from './Trainer/display-trainer/display-train
 import { UpdateTrainerComponent } from './Trainer/update-trainer/update-trainer.component';
 import {TaskModule} from './task/task.module';
 import { TaskService } from './shared/task.service';
+import { StartupComponent } from './startup/startup.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +40,12 @@ import { TaskService } from './shared/task.service';
     TrainerComponent,
     AddTrainerComponent,
     DisplayTrainerComponent,
-    UpdateTrainerComponent
+    UpdateTrainerComponent,
+    StartupComponent,
+    AboutUsComponent,
+    ContactUsComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [  
     BrowserModule,

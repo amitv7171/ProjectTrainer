@@ -2,7 +2,7 @@
 
 
  <nav class="navbar navbar-dark bg-dark">
-  <a class="navbar-brand text-white">Trainer Management System</a>
+  <a class="navbar-brand text-white">Train Future</a>
 
   <ul class="navbar-nav mr-auto">
     <li class="nav-item">
@@ -10,11 +10,30 @@
     </li>
   </ul>
   <ul class="navbar-nav mr-auto">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/taskDetails/{{userDetails.userName}}"><strong>My Task</strong></a>
+    </li>
+  </ul>
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item">
+      <a class="nav-link" routerLink=""><strong>My Dashboard</strong></a>
+    </li>
+  </ul>
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item">
+      <a class="nav-link" routerLink=""><strong>My Details</strong></a>
+    </li>
+  </ul>
+  <ul class="navbar-nav mr-auto">
     <li class="nav-item text-white"> <strong>Username : </strong>{{userDetails.userName}}</li>
   </ul>
   <ul class="navbar-nav mr-auto">
-    <li class="nav-item text-white"> <strong>FullName : </strong>{{userDetails.fullName}}</li>
-  </ul><ul class="navbar-nav mr-auto">
+    <li class="nav-item text-white" *ngIf="userDetails.trackName!=null"> <strong>My Track : </strong> {{userDetails.trackName}}</li>
+  </ul>
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item text-white" *ngIf="userDetails.trackName==null"> <strong>My Track : </strong> Track Not Assigned</li>
+  </ul>
+  <ul class="navbar-nav mr-auto">
     <li class="nav-item text-white"> <strong>Email : </strong>{{userDetails.email}}</li>
   </ul>
   <button class="btn btn-danger my-2 my-sm-0" (click)="onLogout()">Logout</button>

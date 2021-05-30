@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+      
+        <ng-container  *ngFor="let i of  listTask; let item = index">
+          <div class="col-4">
+          <div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
+            <div class="card-header" style="color: rgb(10, 21, 172);text-align: center;"><h2><b><u>{{i.trackName}}</u></b></h2></div>
+            <div class="card-body">
+              
+              <h5 class="card-title">TaskName:{{i.taskName}}</h5>
+              <h5 class="card-title">Description:{{i.taskDescription}}</h5>
+             
+            </div>
+          </div>
+        </div>
+        </ng-container >
+       
+      
+      </div>
+    </div>

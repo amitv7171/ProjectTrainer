@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AcceptTaskDetailsComponent } from './accept-task-details/accept-task-details.component';
 import { UpdateTaskDetailsComponent } from './update-task-details/update-task-details.component';
 import { DeleteTaskDetailsComponent } from './delete-task-details/delete-task-details.component';
+import { SpecificTaskComponent } from './specific-task/specific-task.component';
 
 
 
@@ -13,7 +14,8 @@ import { DeleteTaskDetailsComponent } from './delete-task-details/delete-task-de
     DisplayAllTaskComponent,
     AcceptTaskDetailsComponent,
     UpdateTaskDetailsComponent,
-    DeleteTaskDetailsComponent
+    DeleteTaskDetailsComponent,
+    SpecificTaskComponent
   ],
   imports: [
     CommonModule,FormsModule,ReactiveFormsModule

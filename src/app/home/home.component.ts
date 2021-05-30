@@ -9,6 +9,7 @@ import { Component, HostBinding, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   userDetails;
+  
 
   constructor(private router: Router, private service: UserService) { }
 
@@ -17,12 +18,18 @@ export class HomeComponent implements OnInit {
      this.service.getUserProfile().subscribe(
        res => {
          this.userDetails = res;
+         
        },
        err => {
          console.log(err);
        },
      );
+
+
+
   }
+
+
 
 
   onLogout() {
