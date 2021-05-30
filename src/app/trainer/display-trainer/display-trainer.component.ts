@@ -16,9 +16,7 @@ export class DisplayTrainerComponent implements OnInit {
   }
   deleteTrainer(item)
   {
-    
    this.service.deleteTrainer(item).subscribe((result)=>{console.warn("result",result)})
-  
-
   }
+  
 }

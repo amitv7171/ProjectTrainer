@@ -26,7 +26,7 @@
         
         </div>
 <!-- ////////////////////////////////////////////////// -->
-        <div>
+        <!-- <div>
             <br>
             <br>
         </div>
@@ -44,17 +44,52 @@
               </thead>
               <tbody>
                 <tr *ngFor="let i of TaskNameList">
-                  <!--<td><a class="nav-item nav-link" href="EditMobileDetails/{{i.id}}">{{i.Mobile_IMEI}}</a></td>-->
-                  
-                  <!--<td><a class="nav-item nav-link" href="EditEmployeeDetailsByAdmin/{{i.id}}">{{i.Name}}</a></td>-->
                   <td>{{i.taskId}}</td>
                   <td style="color: coral;" id='name'>{{i.trackName}}</td>
                   <td>{{i.taskName}}</td>
                   <th style="color: blue;">{{i.taskDescription}}</th>
                   <th><i (click)="deleteTask(i.taskId)" class="fa fa-close" style="font-size:20px;color:red">Delete</i></th>
-     
+
                 </tr>
+                
               </tbody>
             </table>
           </div>
           </div>
+          <ng-container  *ngFor="let i of TaskNameList; let item = index">
+            <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+              <div class="card-header">{{i.taskId}}</div>
+              <div class="card-body">
+                <h5 class="card-title">{{i.trackName}}</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </ng-container > -->
+          <div class="container">
+          <div class="row">
+            
+              <ng-container  *ngFor="let i of TaskNameList; let item = index">
+                <div class="col-4">
+                <div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
+                  <div class="card-header" style="color: rgb(10, 21, 172);text-align: center;"><h2><b><u>{{i.trackName}}</u></b></h2></div>
+                  <div class="card-body">
+                    
+                    <h5 class="card-title">TaskName:{{i.taskName}}</h5>
+                    <h5 class="card-title">Description:{{i.taskDescription}}</h5>
+                    <div>
+                      <!-- <a [routerLink]=['/UpdateTaskDetails']></a> -->
+                      <!-- <a routerLink="/registration"><button class="btn btn-success" > Submit </button></a> -->
+                      <!-- <a [routerLink]=['/UpdateTaskDetails']> <button type="button" class="btn btn-warning">Warning</button></a> -->
+                      <!-- <button class="nav-item nav-link" href="edit/{{i.id}}">{{i.Name}}</a>>Update</button> -->
+                      <i (click)="deleteTask(i.taskId)" class="fa fa-close" style="font-size:20px;color:rgb(230, 13, 13)"><b>Delete</b></i><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i>
+                      <i (click)=" navigateToLogin(i.taskId)" class="fa fa-close" style="font-size:20px;color:rgb(25, 104, 124)"><b>Update</b></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </ng-container >
+             
+            
+            </div>
+          </div>
+         

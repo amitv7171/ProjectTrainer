@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {FormBuilder, Validators, FormGroup} from '@angular/forms';
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Observable } from 'rxjs';
+import { data } from 'jquery';
 
 @Injectable({
   providedIn: 'root'
@@ -107,6 +108,12 @@ export class UserService {
   {
     return this.http.put('https://localhost:44304/api/AspNetUsers',data);
   }
+
+  postTrackToTracker(id,data)
+  {
+   return this.http.post(`https://localhost:44304/api/Tracker/${id}`,data);
+  }
+
 
 
 }

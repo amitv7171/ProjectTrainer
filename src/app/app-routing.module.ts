@@ -43,7 +43,8 @@ const routes: Routes = [
 {path:'DisplayTask',component:DisplayAllTaskComponent},
 {path:'AcceptTaskDetails',component:AcceptTaskDetailsComponent},
 {path:'UpdateTaskDetails',component:UpdateTaskDetailsComponent},
-{path:'DeleteTaskDetails',component:DeleteTaskDetailsComponent}
+{path:'DeleteTaskDetails',component:DeleteTaskDetailsComponent},
+{path:'UpdateTaskDetails/:id',component:UpdateTaskDetailsComponent}
 
 ];
 

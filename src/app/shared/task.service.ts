@@ -14,13 +14,19 @@ export class TaskService {
    // console.warn(TaskName);
     //`${this.CustomerProductsUrl}/${data}`
     
-    return this.http.get(`${this.TaskUrl}/${TaskName}`);
+    return this.http.get(`${this.TaskUrl+"/Get"}/${TaskName}`);
   }
+  GetParticularDataById(Id:any){
+    // console.warn(TaskName);
+     //`${this.CustomerProductsUrl}/${data}`
+     
+     return this.http.get(`${this.TaskUrl+"/GetById"}/${Id}`);
+   }
   AddTaskDetails(data:any){
-    return this.http.post(this.TaskUrl,data);
+    return this.http.post(this.TaskUrl+"/Post",data);
   }
   UpdateTheTaskDetails(id:any,data:any){
-    return this.http.put(`${this.TaskUrl}/${id}`,data);
+    return this.http.put(`${this.TaskUrl+"/Put"}/${id}`,data);
 
   }
   
@@ -28,6 +34,9 @@ export class TaskService {
     // console.warn(TaskName);
      //`${this.CustomerProductsUrl}/${data}`
      
-     return this.http.delete(`${this.TaskUrl}/${TaskId}`);
+     return this.http.delete(`${this.TaskUrl+"/Delete"}/${TaskId}`);
    }
+
+  
+
 }

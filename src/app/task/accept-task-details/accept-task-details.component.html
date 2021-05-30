@@ -1,6 +1,6 @@
-
+<!-- 
 <div class="container" id="div1" style="background-color:  rgba(42, 114, 8, 0.966);" >
-    <!--<form [formGroup]="addEmployees" (ngSubmit)="collectAndAddDetails()">-->
+    <form [formGroup]="addEmployees" (ngSubmit)="collectAndAddDetails()">
         
         <form [formGroup]="addtaskDetails" (ngSubmit)="collectAndAddDetails()" >
             <div class="form-group">
@@ -19,4 +19,48 @@
             <button type="submit" class="btn btn-primary" id="submitbtn" >Submit</button>
           </form>
         
+        </div> -->
+
+
+        <div class="container register-form">
+  
+          <div class="form">
+              <div class="note">
+                  <p>This is a Register Form made to Add Details.</p>
+              </div>
+              <form [formGroup]="addtaskDetails" (ngSubmit)="collectAndAddDetails()" >
+              <div class="form-content">
+                  <div class="row">
+                      <div class="col-md-9">
+                          <div class="form-group">
+                            <label style="color: rgb(44, 8, 92);">TRACK Name</label>
+                            <input type="text" class="form-control" id="trackName"  placeholder="Enter trackName " name="trackName" formControlName="trackName">
+                          
+                          </div>
+                      </div>
+                      <div class="col-md-9">
+                          <div class="form-group">
+                            <label style="color: rgb(44, 8, 92);">TASK NAME</label>
+                            <input  type="text" class="form-control" id="taskName"  placeholder="Enter taskName" name="taskName" formControlName="taskName">
+                           
+                          </div>
+                        </div>
+                        <div class="col-md-9">
+                        
+                          <div class="form-group">
+                            <label style="color: rgb(44, 8, 92);">DESCRIPTION</label>
+                            <input type="text" class="form-control" id="taskDescription"  placeholder="Enter taskDescription"name="taskDescription" formControlName="taskDescription">
+                           
+                          </div>
+                      </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary" id="submitbtn" >Submit</button>
+              </div>
+            </form>
+          </div>
+        
         </div>
+        
+        
+        
+           

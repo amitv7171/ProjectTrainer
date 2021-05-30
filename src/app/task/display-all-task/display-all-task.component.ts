@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { TaskService } from 'src/app/shared/task.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-display-all-task',
@@ -14,13 +15,13 @@ export class DisplayAllTaskComponent implements OnInit {
 
   public TaskNameList:any;
 
-  constructor(private _taskService:TaskService) { }
+  constructor(private _taskService:TaskService,private router: Router) { }
 
   ngOnInit(): void {
   }
   deleteTask(item)
   {
-    
+  
     this._taskService.DeleteTaskWithID(item).subscribe((result)=>{console.warn("result",result)})
   
 
@@ -34,11 +35,8 @@ export class DisplayAllTaskComponent implements OnInit {
 
       
     })
-    
-    
-
-    }
-
-  
-
+  }
+  navigateToLogin(id:any) {
+    this.router.navigateByUrl('/UpdateTaskDetails/'+id);
+ }
 }

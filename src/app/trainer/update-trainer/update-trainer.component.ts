@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormGroup,FormControl} from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { UserService} from './../../shared/user.service';
+
 @Component({
   selector: 'app-update-trainer',
   templateUrl: './update-trainer.component.html',
@@ -11,6 +12,9 @@ import { UserService} from './../../shared/user.service';
 export class UpdateTrainerComponent implements OnInit {
 
   alertTrainer:boolean=false
+
+  alertUpdate:boolean=false;
+
   public profile:string;
   constructor(private router: ActivatedRoute,private service:UserService) { }
   editTrainer=new FormGroup(
@@ -92,9 +96,21 @@ collection()
   {
     this.service.update(this.editTrainer.value).subscribe((result)=>
     this. alertTrainer=true
+ 
+
+    
     )
-    console.log(this.editTrainer.value);
+    console.log(this.editTrainer.value);   
+   
   }
+
+
+  postToTracker()
+   {
+    this.service.postTrackToTracker(this.editTrainer.value.userName,this.editTrainer.value).subscribe((result)=>
+    this. alertTrainer=true 
+    )
+   }
 
   closeAlert()
   {
