@@ -1,0 +1,96 @@
+.tile {
+    background-color: white;
+    width: 70%; /* You can change the size however you like. */
+    height: 18em;
+    margin: 1em;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.4);
+  
+  }
+  .wrap
+  {
+    padding-left: 30ch;
+  }
+  
+  .tile-img {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: none;
+    width: 15em;
+    height: inherit;
+    float: left;
+  }
+  
+  .tile-info {
+    height: auto;
+    padding: 1em;
+    margin-left: 15em; 
+  }
+  
+  /* These are optional changes I make to my css. */
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  p {
+    font-family: sans-serif;
+    color: #777;
+  }
+  
+  /* You can ignore anything below this. It does not contribute to the codepen in anyway, It's just so I can center the codepen when it displays and make it look pretty :D */
+  
+  html {
+    background-color: #eee;
+  }
+  
+  html, body {
+    width: 100%;
+    height: 100%;
+  }
+  
+  html > body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  *{transition:all 0.3s ease-in-out;}
+
+.container{
+  clear:both;
+  overflow:auto;
+ 
+}
+
+nav{float:right;}
+
+.logo img{float:left;}
+
+ul li{
+  display: inline-block; padding:10px;
+  font-size:20px; font-family:raleway;
+  color: black;
+}
+
+ul li:hover{
+  color:orange;
+  
+}
+
+a.navbar-brand {
+  font-size: 0.9em;
+  color: black;
+
+}
+
+.wrapper
+{
+
+  padding-left: 20ch;
+text-align: center;
+
+}

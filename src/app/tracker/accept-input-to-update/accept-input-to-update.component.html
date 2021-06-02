@@ -1,0 +1,32 @@
+
+<div class="container register-form">
+  
+    <div class="form">
+        <div class="note">
+            <p>Please Provide Track Id and UserName to Update</p>
+        </div>
+        
+            <form [formGroup]=" GetUserNameAndTaskId" (ngSubmit)="navigateToUpdateFormTracker()">
+        <div class="form-content">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="form-group">
+                      <label style="color: rgb(44, 8, 92);">User Name</label>
+                      <input type="text" class="form-control" id="userName"  placeholder="Enter userName" name="userName" formControlName="userName">
+                    
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="form-group">
+                      <label style="color: rgb(44, 8, 92);">Task Id</label>
+                      <input  type="text" class="form-control" id="taskId"  placeholder="Enter taskId" name="taskId" formControlName="taskId">
+                     
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary" id="submitbtn" >Submit</button>
+        </div>
+      </form>
+    </div>
+  
+  </div>

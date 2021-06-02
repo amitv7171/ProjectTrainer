@@ -1,5 +1,26 @@
+<div class="container">
+  <div class="logo">
+    <img src="/assets/img/logo3.png" alt="" width="100"/>
+    </div>
+  <nav>
+    <ul>
+      <li>
+      <a class="navbar-brand " href="/DisplayTask">Task Portal</a>
+      </li>
+      <li>
+      <a class="navbar-brand " href="/AcceptTaskDetails">Add Task</a>
+    </li>
+    <li>
+      <a class="navbar-brand " href="/UpdateTaskDetails">Update Task</a>
+    </li>
+    </ul>
+    </nav>
+  </div>
+  <hr />
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+
+  <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand " href="/DisplayTask">Task Portal</a>
       <a class="navbar-brand " href="/AcceptTaskDetails">Add Task</a>
@@ -8,88 +29,60 @@
         <span class="navbar-toggler-icon"></span>
       </button>
     </div>
-  </nav>
+  </nav> -->
+
+
+
+
+<!-- 
   <div class="wrapper"></div>
-<div class="container" id="div1" style="background-color: rgba(42, 114, 8, 0.966);" >
-    <!--<form [formGroup]="addEmployees" (ngSubmit)="collectAndAddDetails()">-->
-        <!-- <form [formGroup]="getName" (ngSubmit)="submitNameToDelete()"></form> -->
-        
+  <div class="container" id="div1" style="background-color: rgba(42, 114, 8, 0.966);" >
+      
+          <form [formGroup]="getName" (ngSubmit)="submitNameToGetData()">
+              <div class="form-group">
+                  <h1 style="color: cyan;">Please Enter Name The Track Name</h1>
+                  <label style="color: rgb(44, 8, 92);">NAME</label>
+                <input type="text" class="form-control" id="TrackName"  placeholder="Enter TrackName" name="TrackName" formControlName="TrackName">
+                <small id="Help" class="form-text text-muted"></small>
+              <button type="submit" class="btn btn-primary" id="submitbtn" >Submit</button>
+              </div>
+          </form>
+          
+          </div> -->
+
+
+
+  
+  <div class="wrapper">
+<div class="container" id="div1" style="background-color: white;" >
+       
         <form [formGroup]="getName" (ngSubmit)="submitNameToGetData()">
             <div class="form-group">
-                <h1 style="color: cyan;">Please Enter Name The Track Name</h1>
-                <label style="color: rgb(44, 8, 92);">NAME</label>
-              <input type="text" class="form-control" id="TrackName"  placeholder="Enter TrackName" name="TrackName" formControlName="TrackName">
+                <h1 style="color: black;">Please Enter Name The Track Name</h1>
+                <br>
+                <label  style= "color: black;font-size: 20px;"><strong> NAME </strong></label>
+                <br>  
+                <br> 
+              <input type="text" style="height: 50px;" class="form-control" id="TrackName"  placeholder="Enter TrackName" name="TrackName" formControlName="TrackName">
               <small id="Help" class="form-text text-muted"></small>
-            <button type="submit" class="btn btn-primary" id="submitbtn" >Submit</button>
+              <br>
+            <button type="submit" style="height: 50px;width: 80px;" class="btn btn-primary" id="submitbtn" >Submit</button>
             </div>
         </form>
-        
         </div>
-<!-- ////////////////////////////////////////////////// -->
-        <!-- <div>
-            <br>
-            <br>
-        </div>
-        <div class="container">
-            <div class="col-6">
-            <table class="table table-striped table-light">
-              <thead>
-                <tr>
-                    <th>TASKId</th>
-                    <th >TRACK Name</th>
-                    <th >TASK NAME</th>
-                    <th>DESCRIPTION</th>
-                    <Th>Delete Task</Th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr *ngFor="let i of TaskNameList">
-                  <td>{{i.taskId}}</td>
-                  <td style="color: coral;" id='name'>{{i.trackName}}</td>
-                  <td>{{i.taskName}}</td>
-                  <th style="color: blue;">{{i.taskDescription}}</th>
-                  <th><i (click)="deleteTask(i.taskId)" class="fa fa-close" style="font-size:20px;color:red">Delete</i></th>
+      </div>
 
-                </tr>
-                
-              </tbody>
-            </table>
-          </div>
-          </div>
-          <ng-container  *ngFor="let i of TaskNameList; let item = index">
-            <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-              <div class="card-header">{{i.taskId}}</div>
-              <div class="card-body">
-                <h5 class="card-title">{{i.trackName}}</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-            </div>
-          </ng-container > -->
-          <div class="container">
-          <div class="row">
-            
-              <ng-container  *ngFor="let i of TaskNameList; let item = index">
-                <div class="col-4">
-                <div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
-                  <div class="card-header" style="color: rgb(10, 21, 172);text-align: center;"><h2><b><u>{{i.trackName}}</u></b></h2></div>
-                  <div class="card-body">
-                    
-                    <h5 class="card-title">TaskName:{{i.taskName}}</h5>
-                    <h5 class="card-title">Description:{{i.taskDescription}}</h5>
-                    <div>
-                      <!-- <a [routerLink]=['/UpdateTaskDetails']></a> -->
-                      <!-- <a routerLink="/registration"><button class="btn btn-success" > Submit </button></a> -->
-                      <!-- <a [routerLink]=['/UpdateTaskDetails']> <button type="button" class="btn btn-warning">Warning</button></a> -->
-                      <!-- <button class="nav-item nav-link" href="edit/{{i.id}}">{{i.Name}}</a>>Update</button> -->
-                      <i (click)="deleteTask(i.taskId)" class="fa fa-close" style="font-size:20px;color:rgb(230, 13, 13)"><b>Delete</b></i><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i>
-                      <i (click)=" navigateToLogin(i.taskId)" class="fa fa-close" style="font-size:20px;color:rgb(25, 104, 124)"><b>Update</b></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              </ng-container >
-             
-            
+      <div class="wrap"> 
+   <ng-container  *ngFor="let i of TaskNameList; let item = index">
+          <div class='tile'>
+            <img class='tile-img' style="background-image: url(/assets/img/logo3.png);"/>
+            <div class='tile-info'>
+              <h1>{{i.taskName}}</h1>
+              <h2>Description:</h2>
+              <p>{{i.taskDescription}}</p>
+              <i (click)="deleteTask(i.taskId)" class="fa fa-close" style="font-size:20px;color:rgb(230, 13, 13)"><b>Delete</b></i><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i>
+              <i (click)=" navigateToLogin(i.taskId)" class="fa fa-close" style="font-size:20px;color:rgb(25, 104, 124)"><b>Update</b></i>
+           
             </div>
           </div>
-         
+         </ng-container ></div>

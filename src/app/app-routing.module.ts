@@ -21,6 +21,10 @@ import { AboutUsComponent} from './about-us/about-us.component';
 import { ContactUsComponent} from './contact-us/contact-us.component';
 import { StartupComponent} from './startup/startup.component';
 import { SpecificTaskComponent} from './task/specific-task/specific-task.component';
+import {  UpdateFormTrackerComponent} from './tracker/update-form-tracker/update-form-tracker.component';
+import { TrackerComponent} from './tracker/tracker.component';
+import { MyDetailsComponent} from './my-details/my-details.component';
+import { from } from 'rxjs';
 
 const routes: Routes = [
   {path:'mainEntry',redirectTo:'/user/login',pathMatch:'full'},
@@ -53,7 +57,10 @@ const routes: Routes = [
 {path:'taskDetails/:id',component:SpecificTaskComponent},
 
 {path:'about',component:AboutUsComponent},
-{path:'contact',component:ContactUsComponent}
+{path:'contact',component:ContactUsComponent},
+{path:'UpdateTrackerStatus/:taskId/:userName',component:UpdateFormTrackerComponent},
+{path:'AcceptInputsToUpdateTracker',component:TrackerComponent},
+{path:'my-details',component:MyDetailsComponent}
 
 ];
 

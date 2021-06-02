@@ -9,6 +9,10 @@ export class TaskService {
    TaskUrl="https://localhost:44304/api/Task";
    TaskUrlTrack="https://localhost:44304/api/Tracker";
 
+   TrackerDetails="https://localhost:44304/api/Tracker/getparticulardata";
+   url="https://localhost:44304/api/Tracker";
+
+
   constructor(private http: HttpClient) { }
 
   GetAllTasksRelatedToTrack(TaskName:any){
@@ -42,6 +46,15 @@ export class TaskService {
    {
     return this.http.get(`${this.TaskUrlTrack+"/GetAllTracks"}/${id}`);
    }
+
+
+
+   GetParticularTrackerDetails(id:any,name:any){
+    return this.http.get(`${this.TrackerDetails}/${id}/${name}`);
+  }
+  updateTrackerStatus(data:any){
+    return this.http.put(this.url,data)
+  }
   
 
 }

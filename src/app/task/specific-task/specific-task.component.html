@@ -1,3 +1,19 @@
+
+<div class="pos-f-t">
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-primary p-4">
+      <h4 class="text-white">Train Future</h4>
+      <span class="text-white">You Become What You Study</span>
+    </div>
+  </div>
+  <nav class="navbar navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+</div>
+
+<!-- 
 <div class="container">
     <div class="row">
       
@@ -17,4 +33,31 @@
        
       
       </div>
+    </div> -->
+
+    <!-- <ng-container  *ngFor="let i of  listTask; let item = index">
+    <div class='tile'>
+      <img class='tile-img' style="background-image: url(/assets/img/logo.jpeg);"/>
+      <div class='tile-info'>
+        <h1>{{i.taskName}}</h1>
+        <p>{{i.taskDescription}}</p>
+      </div>
     </div>
+  </ng-container> -->
+
+
+  
+  <div id="mainContainer" *ngFor="let i of  listTask; let item = index">
+    <div class="aside">
+       <div class='cardview'>
+      <div class="logo"><img src="/assets/img/logo3.png" alt="profile-sample2" /></div> </div>
+    </div> 
+    <div id="card-content">
+        <div id="header">
+          <h2>{{i.taskName}}</h2> 
+        </div>
+        <div id="disc">
+            <p>{{i.taskDescription}}</p>
+        </div>
+    </div>
+  </div>

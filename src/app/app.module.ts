@@ -27,6 +27,12 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { TrackerComponent } from './tracker/tracker.component';
+import { AcceptInputToUpdateComponent } from './tracker/accept-input-to-update/accept-input-to-update.component';
+import { UpdateFormTrackerComponent } from './tracker/update-form-tracker/update-form-tracker.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { MyDetailsComponent } from './my-details/my-details.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +51,11 @@ import { FooterComponent } from './footer/footer.component';
     AboutUsComponent,
     ContactUsComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    TrackerComponent,
+    AcceptInputToUpdateComponent,
+    UpdateFormTrackerComponent,
+    MyDetailsComponent
   ],
   imports: [  
     BrowserModule,
@@ -53,11 +63,13 @@ import { FooterComponent } from './footer/footer.component';
     ReactiveFormsModule,
     HttpClientModule,
     TaskModule,
+    MDBBootstrapModule.forRoot(),
     BrowserAnimationsModule,
     ToastrModule.forRoot({
       progressBar: true
     }),
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [TaskService,UserService,{
     provide: HTTP_INTERCEPTORS,
