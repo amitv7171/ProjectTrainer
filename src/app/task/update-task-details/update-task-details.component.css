@@ -34,3 +34,19 @@ p
     color: whitesmoke;
     font-size: 35px;
 }
+.wrapper {
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    justify-content: center;
+    width: 100%;
+    padding: 148px;
+    background: url(C:\Users\HP\Pictures\TheWall\@WallPaper.jpg)  no-repeat center center fixed;
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+    
+  }

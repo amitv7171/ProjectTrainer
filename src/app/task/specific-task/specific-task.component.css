@@ -4,6 +4,23 @@
   box-sizing: border-box;
 }
 
+.wrapper {
+    
+  display: flex;
+  align-items: center;
+  flex-direction: column; 
+  justify-content: center;
+  width: 100%;
+  padding: 105px;
+  background: url(C:\Users\HP\Pictures\TheWall\@WallPaper.jpg)  no-repeat center center fixed;
+  -webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+
+  
+}
+
 body{
   width: 100%;
 	height: 100vh;
@@ -14,6 +31,10 @@ body{
 }
 
 #mainContainer{
+
+
+  
+  
   width:50em;
   height:0 auto;
 

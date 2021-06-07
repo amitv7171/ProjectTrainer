@@ -2,7 +2,30 @@ label{
     color: blue;
 }
 
+
+
+.wrapper {
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    justify-content: center;
+    width: 100%;
+    padding: 105px;
+    background: url(C:\Users\HP\Pictures\TheWall\@WallPaper.jpg)  no-repeat center center fixed;
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+    
+  }
+
+
+
 body {
+
+    
     background:#333;
 }
 #login {
@@ -29,9 +52,7 @@ body {
 	-moz-transform: rotate(0);
 	transform: rotate(0);
 }
-.login article {
-	
-}
+
 .login .form-group {
 	margin-bottom:17px;
 }

@@ -33,6 +33,11 @@ import { UpdateFormTrackerComponent } from './tracker/update-form-tracker/update
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { MyDetailsComponent } from './my-details/my-details.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { UpdateTaskReadyComponent } from './update-task-ready/update-task-ready.component';
+import { AcceptInputToGetListOfStudentsComponentComponent } from './trainer/accept-input-to-get-list-of-students-component/accept-input-to-get-list-of-students-component.component';
+import { DisplayDetailsBasedOnTrackComponentComponent } from './trainer/display-details-based-on-track-component/display-details-based-on-track-component.component';
+
 
 @NgModule({
   declarations: [
@@ -55,7 +60,12 @@ import { MyDetailsComponent } from './my-details/my-details.component';
     TrackerComponent,
     AcceptInputToUpdateComponent,
     UpdateFormTrackerComponent,
-    MyDetailsComponent
+    MyDetailsComponent,
+    DashboardComponent,
+    UpdateTaskReadyComponent,
+    AcceptInputToGetListOfStudentsComponentComponent,
+    DisplayDetailsBasedOnTrackComponentComponent,
+   
   ],
   imports: [  
     BrowserModule,

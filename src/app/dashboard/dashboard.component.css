@@ -1,16 +1,11 @@
 .tile {
     background-color: white;
-    width: 70%; /* You can change the size however you like. */
-    height: 18em;
+    width: 100%; /* You can change the size however you like. */
+    height: 15em;
     margin: 1em;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.4);
-  
-  }
-  .wrap
-  {
-    padding-left: 30ch;
   }
   
   .tile-img {
@@ -21,9 +16,17 @@
     height: inherit;
     float: left;
   }
-  
+  h4
+  {
+      margin-top: 0.5em;
+  }
+  p
+  {
+    margin-top: 0.5em; 
+  }
   .tile-info {
-    height: auto;
+      margin-top: 1em;
+    height: inherit;
     padding: 1em;
     margin-left: 15em; 
   }
@@ -57,46 +60,14 @@
     justify-content: center;
     align-items: center;
   }
-
-  *{transition:all 0.3s ease-in-out;}
-
-.container{
-  clear:both;
-  overflow:auto;
- 
-}
-
-nav{float:right;}
-
-.logo img{float:left;}
-
-ul li{
-  display: inline-block; padding:10px;
-  font-size:20px; font-family:raleway;
-  color: black;
-}
-
-ul li:hover{
-  color:orange;
-  
-}
-
-a.navbar-brand {
-  font-size: 0.9em;
-  color: black;
-
-}
-
-.wrapper
-{
-
-  
+  .wrapper {
+    
     display: flex;
     align-items: center;
     flex-direction: column; 
     justify-content: center;
     width: 100%;
-    padding: 215px;
+    padding: 105px;
     background: url(C:\Users\HP\Pictures\TheWall\@WallPaper.jpg)  no-repeat center center fixed;
     -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -104,11 +75,4 @@ a.navbar-brand {
   background-size: cover;
 
     
-  
-
-
-
-  padding-left: 20ch;
-text-align: center;
-
-}
+  }

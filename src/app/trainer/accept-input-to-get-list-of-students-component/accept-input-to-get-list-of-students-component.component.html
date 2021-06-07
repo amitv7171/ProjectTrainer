@@ -1,0 +1,29 @@
+
+<div class="wrapper">
+<div class="container register-form">
+
+    <div class="form">
+      <div class="note">
+        <h1>Track Name</h1>
+      </div>
+      <form [formGroup]="GetName" (ngSubmit)="submitNameToGetData()" >
+        <div class="form-content">
+          <div class="row">
+            <div class="col-md-9">
+              <div class="form-group">
+                <label style="color: rgb(44, 8, 92);">NAME</label>
+                <input type="text"  class="form-control" id="trackName" placeholder="Enter trackName" name="trackName"
+                  formControlName="trackName">
+  
+              </div>
+            </div>
+  
+          </div>
+  
+          <button type="submit"  class="btn btn-primary" id="submitbtn">Submit</button>
+        </div>
+      </form>
+    </div>
+  
+  </div>
+</div>

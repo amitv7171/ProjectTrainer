@@ -1,3 +1,4 @@
+
 .note
 {
     text-align: center;
@@ -9,9 +10,9 @@
 }
 .form-content
 {
-    padding: 5%;
+   
     border: 1px solid #ced4da;
-    margin-bottom: 2%;
+   
 }
 .form-control{
     border-radius:1.5rem;
@@ -25,4 +26,27 @@
     cursor: pointer;
     background: #0062cc;
     color: #fff;
+}
+.wrapper {
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    justify-content: center;
+    width: 100%;
+    padding: 215px;
+    background: url(C:\Users\HP\Pictures\TheWall\@WallPaper.jpg)  no-repeat center center fixed;
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+    
+  }
+  p
+{
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: whitesmoke;
+    font-size: 35px;
 }

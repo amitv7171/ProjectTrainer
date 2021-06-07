@@ -24,7 +24,10 @@ import { SpecificTaskComponent} from './task/specific-task/specific-task.compone
 import {  UpdateFormTrackerComponent} from './tracker/update-form-tracker/update-form-tracker.component';
 import { TrackerComponent} from './tracker/tracker.component';
 import { MyDetailsComponent} from './my-details/my-details.component';
-import { from } from 'rxjs';
+import { DashboardComponent} from './dashboard/dashboard.component';
+import { UpdateTaskReadyComponent} from './update-task-ready/update-task-ready.component';
+import { AcceptInputToGetListOfStudentsComponentComponent} from './trainer/accept-input-to-get-list-of-students-component/accept-input-to-get-list-of-students-component.component';
+import { DisplayDetailsBasedOnTrackComponentComponent} from './trainer/display-details-based-on-track-component/display-details-based-on-track-component.component';
 
 const routes: Routes = [
   {path:'mainEntry',redirectTo:'/user/login',pathMatch:'full'},
@@ -41,26 +44,32 @@ const routes: Routes = [
 {path:'adminpanel',component:AdmimPanelComponent,canActivate:[AuthGuard],data :{permittedRoles:['Admin']}},
 //{path: 'employe', component: EmployeeComponent}
 
-{path:'display-Trainer',component:DisplayTrainerComponent},
-{path:'add-Trainer',component:AddTrainerComponent},
-{path:'Trainer',component:TrainerComponent},
-{path:'update',component:UpdateTrainerComponent},
-{path:'update/:id',component:UpdateTrainerComponent},
+{path:'display-Trainer',component:DisplayTrainerComponent,canActivate:[AuthGuard],data :{permittedRoles:['Admin']}},
+{path:'add-Trainer',component:AddTrainerComponent,canActivate:[AuthGuard],data :{permittedRoles:['Admin']}},
+{path:'Trainer',component:TrainerComponent,canActivate:[AuthGuard],data :{permittedRoles:['Admin']}},
+{path:'update',component:UpdateTrainerComponent,canActivate:[AuthGuard],data :{permittedRoles:['Admin']}},
+{path:'update/:id',component:UpdateTrainerComponent,canActivate:[AuthGuard],data :{permittedRoles:['Admin']}},
 
 
-{path:'DisplayTask',component:DisplayAllTaskComponent},
-{path:'AcceptTaskDetails',component:AcceptTaskDetailsComponent},
-{path:'UpdateTaskDetails',component:UpdateTaskDetailsComponent},
-{path:'DeleteTaskDetails',component:DeleteTaskDetailsComponent},
-{path:'UpdateTaskDetails/:id',component:UpdateTaskDetailsComponent},
+{path:'DisplayTask',component:DisplayAllTaskComponent,canActivate:[AuthGuard],data :{permittedRoles:['Admin']}},
+{path:'AcceptTaskDetails',component:AcceptTaskDetailsComponent,canActivate:[AuthGuard],data :{permittedRoles:['Admin']}},
+{path:'UpdateTaskDetails',component:UpdateTaskDetailsComponent,canActivate:[AuthGuard],data :{permittedRoles:['Admin']}},
+{path:'DeleteTaskDetails',component:DeleteTaskDetailsComponent,canActivate:[AuthGuard],data :{permittedRoles:['Admin']}},
+{path:'UpdateTaskDetails/:id',component:UpdateTaskDetailsComponent,canActivate:[AuthGuard],data :{permittedRoles:['Admin']}},
 {path:'start',component:StartupComponent},
+
 {path:'taskDetails/:id',component:SpecificTaskComponent},
 
 {path:'about',component:AboutUsComponent},
 {path:'contact',component:ContactUsComponent},
-{path:'UpdateTrackerStatus/:taskId/:userName',component:UpdateFormTrackerComponent},
+{path:'UpdateTrackerStatus/:taskId/:userName',component:UpdateFormTrackerComponent,canActivate:[AuthGuard],data :{permittedRoles:['Admin']}},
 {path:'AcceptInputsToUpdateTracker',component:TrackerComponent},
-{path:'my-details',component:MyDetailsComponent}
+{path:'my-details',component:MyDetailsComponent},
+{path:'dashboard/:name',component:DashboardComponent},
+{path:'UpdateTaskReadyComponent/:taskId/:userName',component:UpdateTaskReadyComponent},
+{path:'AcceptInputToGetEmployees',component:AcceptInputToGetListOfStudentsComponentComponent,canActivate:[AuthGuard],data :{permittedRoles:['Admin']}},
+{path:'DisplayAllDetailsBaseOnTrace/:name',component:DisplayDetailsBasedOnTrackComponentComponent,canActivate:[AuthGuard],data :{permittedRoles:['Admin']}},
+
 
 ];
 

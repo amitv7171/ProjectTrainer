@@ -1,0 +1,32 @@
+  
+  <div class="wrapper"> 
+<div class="container register-form">
+
+    <div class="form">
+        <div class="note">
+            <p>This is a Update Form made to Update Details.</p>
+        </div>
+
+        <!-- <form [formGroup]="updatetaskDetails" (ngSubmit)="collectAndUpdateDetails()" > -->
+      <form [formGroup]=" GetUserNameAndTaskId" (ngSubmit)="UpdateFormTracker()">
+            <div class="form-content">
+                <div class="row">
+                   
+
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <label style="color: rgb(44, 8, 92);">Status Task Ready</label>
+                            <input type="text" class="form-control" id="statucTaskReady"
+                                placeholder="Enter statuc Task Ready" name="statucTaskReady"
+                                formControlName="statucTaskReady">
+
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary" id="submitbtn">Submit</button>
+            </div>
+        </form>
+    </div>
+
+</div>
+</div>  

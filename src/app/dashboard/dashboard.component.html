@@ -1,0 +1,17 @@
+
+<div class="wrapper">
+  <ngContainer *ngFor="let item of collection">
+    <div class='tile'>
+        <img class='tile-img' style="background-image: url(https://static.pexels.com/photos/9050/pexels-photo.jpg);"/>
+        <div class='tile-info'>
+          <h1><strong>Task Id- {{item.taskId}}</strong></h1>
+          <h4 *ngIf="item.statusTaskCompleted==true"> Status Task Completed &nbsp;&nbsp;&nbsp;<i class="fas fa-check-circle green"></i></h4>
+          <h4 *ngIf="item.statusTaskCompleted==false">Status Task Completed &nbsp;&nbsp;&nbsp;<i class="fas fa-times-circle red"></i></h4>
+          <h4 *ngIf="item.statucTaskReady==true">I am Ready &nbsp;&nbsp;&nbsp;<i class="fas fa-check-circle green"></i></h4>
+          <h4 *ngIf="item.statucTaskReady==false">I am Ready &nbsp;&nbsp;&nbsp;<i class="fas fa-times-circle red"></i></h4>
+           <p><strong> If you ready please update your status</strong></p>
+           <a href="/UpdateTaskReadyComponent/{{item.taskId}}/{{item.userName}}" class="fa fa-close" style="font-size:20px;color:rgb(25, 104, 124)"><b>Update</b></a>
+        </div>
+      </div>
+    </ngContainer>
+  </div>

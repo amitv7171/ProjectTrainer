@@ -10,6 +10,7 @@ export class TaskService {
    TaskUrlTrack="https://localhost:44304/api/Tracker";
 
    TrackerDetails="https://localhost:44304/api/Tracker/getparticulardata";
+
    url="https://localhost:44304/api/Tracker";
 
 
@@ -55,6 +56,13 @@ export class TaskService {
   updateTrackerStatus(data:any){
     return this.http.put(this.url,data)
   }
-  
+
+  GetList(name)
+  {
+    return this.http.get(`https://localhost:44304/api/Tracker/dashboard/${name}`)
+  }
+
+
+
 
 }
