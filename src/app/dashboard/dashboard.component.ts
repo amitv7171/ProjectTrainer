@@ -28,7 +28,7 @@ export class DashboardComponent implements OnInit {
   }
   navigateToUpdateFormTracker() {
     this.routerr.navigateByUrl('/UpdateTaskReadyComponent/'+this. GetUserNameAndTaskId.value.taskId+'/'+this. GetUserNameAndTaskId.value.userName);
-
+    alert("Status is updated");
   }
 
 }

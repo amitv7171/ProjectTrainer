@@ -29,10 +29,10 @@ export class TaskService {
      return this.http.get(`${this.TaskUrl+"/GetById"}/${Id}`);
    }
   AddTaskDetails(data:any){
-    return this.http.post(this.TaskUrl+"/Post",data);
+    return this.http.post(this.TaskUrl+"/PostTaskDetails",data);
   }
   UpdateTheTaskDetails(id:any,data:any){
-    return this.http.put(`${this.TaskUrl+"/Put"}/${id}`,data);
+    return this.http.put(`${this.TaskUrl+"/PutDetailsIntoTask"}/${id}`,data);
 
   }
   

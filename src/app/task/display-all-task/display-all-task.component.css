@@ -11,6 +11,7 @@
   .wrap
   {
     padding-left: 30ch;
+ 
   }
   
   .tile-img {
@@ -102,11 +103,6 @@ a.navbar-brand {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-
-    
-  
-
-
 
   padding-left: 20ch;
 text-align: center;
