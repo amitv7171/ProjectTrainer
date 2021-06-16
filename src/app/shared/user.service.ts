@@ -1,8 +1,11 @@
 import { Injectable } from '@angular/core';
 import {FormBuilder, Validators, FormGroup} from '@angular/forms';
-import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { HttpClient, HttpErrorResponse, HttpHeaders } from "@angular/common/http";
 import { Observable } from 'rxjs';
 import { data } from 'jquery';
+import {catchError} from 'rxjs/operators';
+import { throwError } from 'rxjs';
+
 
 @Injectable({
   providedIn: 'root'
@@ -83,41 +86,62 @@ export class UserService {
     return isMatch;
   }
 
+  private handleError(errorResponse: HttpErrorResponse) {
+   
+    console.log(errorResponse.error);
+    alert('We are Under Constructon! Try Again Later!');
+    
+    return throwError('There is problem in service');
+  }
 
+  private ShowUpdate(errorResponse: HttpErrorResponse) {
+   
+    console.log(errorResponse.error);
+    alert('Track Update Succesfully!');
+    
+    return throwError('Data Updated');
+  }
+  private ShowDeleted(errorResponse: HttpErrorResponse) {
+   
+    console.log(errorResponse.error);
+    alert('User Deleted Succesfully!');
+    
+    return throwError('Data Updated');
+  }
 
  getTrainer()
  {
-  return this.http.get('https://localhost:44304/api/AspNetUsers'); 
+  return this.http.get('https://localhost:44304/api/AspNetUsers').pipe(catchError(this.handleError));
  }
 
  deleteTrainer(id)
   {
-    return this.http.delete(`https://localhost:44304/api/AspNetUsers/${id}`);
+    return this.http.delete(`https://localhost:44304/api/AspNetUsers/${id}`).pipe(catchError(this.ShowDeleted));
   }
 
   getSpecificTrainer(id)
   {
-    return this.http.get(`https://localhost:44304/api/AspNetUsers/${id}`);
+    return this.http.get(`https://localhost:44304/api/AspNetUsers/${id}`).pipe(catchError(this.handleError));
   }
   
   updateTrainer(id,data)
   {
-    return this.http.put(`https://localhost:44304/api/AspNetUsers/${id}`,data);
+    return this.http.put(`https://localhost:44304/api/AspNetUsers/${id}`,data).pipe(catchError(this.handleError));
   }
   update(data:any):  Observable<any>
   {
-    return this.http.put('https://localhost:44304/api/AspNetUsers',data);
+    return this.http.put('https://localhost:44304/api/AspNetUsers',data).pipe(catchError(this.handleError));
   }
 
   postTrackToTracker(id,data)
   {
-   return this.http.post(`https://localhost:44304/api/Tracker/${id}`,data);
+   return this.http.post(`https://localhost:44304/api/Tracker/${id}`,data).pipe(catchError(this.ShowUpdate));
   }
 
 
   getTrackTrainersDetails(trackName:any)
  {
-  return this.http.get('https://localhost:44304/api/Tracker/GetTrainers/'+trackName); 
+  return this.http.get('https://localhost:44304/api/Tracker/GetTrainers/'+trackName).pipe(catchError(this.handleError));
  }
 
 }

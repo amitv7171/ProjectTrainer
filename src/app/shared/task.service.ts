@@ -1,5 +1,7 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import {catchError} from 'rxjs/operators';
+import { throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -16,17 +18,25 @@ export class TaskService {
 
   constructor(private http: HttpClient) { }
 
+  
+  private handleError(errorResponse: HttpErrorResponse) {
+   
+    console.log(errorResponse.error);
+    alert('We are Under Constructon! Try Again Later!');
+    return throwError('There is problem in service');
+  }
+
   GetAllTasksRelatedToTrack(TaskName:any){
    // console.warn(TaskName);
     //`${this.CustomerProductsUrl}/${data}`
     
-    return this.http.get(`${this.TaskUrl+"/Get"}/${TaskName}`);
+    return this.http.get(`${this.TaskUrl+"/Get"}/${TaskName}`).pipe(catchError(this.handleError));
   }
   GetParticularDataById(Id:any){
     // console.warn(TaskName);
      //`${this.CustomerProductsUrl}/${data}`
      
-     return this.http.get(`${this.TaskUrl+"/GetById"}/${Id}`);
+     return this.http.get(`${this.TaskUrl+"/GetById"}/${Id}`).pipe(catchError(this.handleError));
    }
   AddTaskDetails(data:any){
     return this.http.post(this.TaskUrl+"/PostTaskDetails",data);
@@ -40,26 +50,26 @@ export class TaskService {
     // console.warn(TaskName);
      //`${this.CustomerProductsUrl}/${data}`
      
-     return this.http.delete(`${this.TaskUrl+"/Delete"}/${TaskId}`);
+     return this.http.delete(`${this.TaskUrl+"/DeleteTask"}/${TaskId}`);
    }
 
    getUserSpecificTask(id)
    {
-    return this.http.get(`${this.TaskUrlTrack+"/GetAllTracks"}/${id}`);
+    return this.http.get(`${this.TaskUrlTrack+"/GetAllTracks"}/${id}`).pipe(catchError(this.handleError));
    }
 
 
 
    GetParticularTrackerDetails(id:any,name:any){
-    return this.http.get(`${this.TrackerDetails}/${id}/${name}`);
+    return this.http.get(`${this.TrackerDetails}/${id}/${name}`).pipe(catchError(this.handleError));
   }
   updateTrackerStatus(data:any){
-    return this.http.put(this.url,data)
+    return this.http.put(this.url,data).pipe(catchError(this.handleError));
   }
 
   GetList(name)
   {
-    return this.http.get(`https://localhost:44304/api/Tracker/dashboard/${name}`)
+    return this.http.get(`https://localhost:44304/api/Tracker/dashboard/${name}`).pipe(catchError(this.handleError));
   }
 
 

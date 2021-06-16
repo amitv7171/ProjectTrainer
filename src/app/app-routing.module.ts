@@ -58,6 +58,8 @@ const routes: Routes = [
 {path:'UpdateTaskDetails/:id',component:UpdateTaskDetailsComponent,canActivate:[AuthGuard],data :{permittedRoles:['Admin']}},
 {path:'start',component:StartupComponent},
 
+{path:'',component:StartupComponent},
+
 {path:'taskDetails/:id',component:SpecificTaskComponent},
 
 {path:'about',component:AboutUsComponent},
